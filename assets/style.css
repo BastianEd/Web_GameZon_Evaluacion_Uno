@@ -1,0 +1,219 @@
+/* =========================================================
+   GameZone – Estilos en rem/% que complementan Bootstrap
+   (coloca este archivo DESPUÉS del CSS de Bootstrap)
+   ========================================================= */
+
+/* Footer “pegado” abajo cuando hay poco contenido */
+html, body { height: 100%; }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #495057;
+}
+
+.main-content { flex: 1 0 auto; }
+
+.footer {
+    flex-shrink: 0;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem 0;
+    width: 100%;
+}
+
+/* Extracto de la empresa (INDEX) */
+.company-extract {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    line-height: 1.7;
+    margin: 2rem 0;
+}
+
+/* (Opcional) sección de contacto, por si la agregas después */
+.contact-form-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+}
+
+/* Tarjetas de productos */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-0.3125rem); /* -5px */
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1) !important; /* 0 10px 20px */
+}
+
+.card-img-top {
+    height: 100%; /* 200px */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Formularios (REGISTER/LOGIN) */
+form {
+    background-color: #ffffff;
+    border: 0.0625rem solid #e5e7eb; /* 1px */
+    border-radius: 0.75rem;           /* 12px */
+    padding: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0.85rem 0;
+}
+
+.field label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="tel"] {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 0.0625rem solid #ced4da;  /* 1px */
+    border-radius: 0.5rem;            /* 8px */
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* 4px */
+}
+
+::placeholder { color: #9aa3af; }
+
+.hint {
+    color: #6b7280;
+    font-size: 0.92rem;
+}
+
+.error {
+    color: #dc3545;
+    min-height: 1.1em;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+/* Botón fantasma para mostrar/ocultar contraseña */
+.btn-ghost {
+    border: 0.0625rem solid #ced4da;  /* 1px */
+    background: transparent;
+    color: #495057;
+    border-radius: 0.5rem;
+    padding: 0.45rem 0.65rem;
+    cursor: pointer;
+}
+
+.btn-ghost:hover { background: #f1f3f5; }
+
+/* Envoltorio de contraseña + botón */
+.password-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Radios en grilla para “género favorito” */
+.options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem 0.75rem;
+}
+
+@media (max-width: 36rem) { /* ~576px */
+    .options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #ffffff;
+    border: 0.0625rem solid #e5e7eb; /* 1px */
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.6rem;
+    cursor: pointer;
+}
+
+.options label:hover { background: #f8fafc; }
+
+/* Medidor de contraseña */
+meter {
+    width: 100%;
+    height: 0.5rem; /* 8px */
+    border: none;
+    background: #e9ecef;
+    border-radius: 999rem;
+    margin-top: 0.35rem;
+}
+meter::-webkit-meter-bar {
+    background: #e9ecef;
+    border-radius: 999rem;
+}
+meter::-webkit-meter-optimum-value {
+    background: #198754; /* success */
+    border-radius: 999rem;
+}
+meter::-webkit-meter-suboptimum-value {
+    background: #ffc107; /* warning */
+    border-radius: 999rem;
+}
+meter::-webkit-meter-even-less-good-value {
+    background: #dc3545; /* danger */
+    border-radius: 999rem;
+}
+/* Firefox */
+meter:-moz-meter-optimum::-moz-meter-bar { background: #198754; }
+meter:-moz-meter-suboptimum::-moz-meter-bar { background: #ffc107; }
+meter:-moz-meter-sub-suboptimum::-moz-meter-bar { background: #dc3545; }
+
+/* Alert/feedback del login */
+.alert {
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #e5e7eb; /* 1px */
+    background: #ffffff;
+    color: #212529;
+}
+
+/* Responsivo para extracto/contacto */
+@media (max-width: 48rem) {         /* 768px */
+    .company-extract,
+    .contact-form-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}
+
+@media (min-width: 48.0625rem) and (max-width: 64rem) { /* 769px–1024px */
+    .company-extract,
+    .contact-form-section {
+        padding: 1.8rem;
+        margin: 1.8rem 0;
+    }
+}
