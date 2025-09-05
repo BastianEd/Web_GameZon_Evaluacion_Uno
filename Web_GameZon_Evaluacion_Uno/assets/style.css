@@ -1,0 +1,378 @@
+/* =========================================================
+GameZone – Estilos en rem/% que complementan Bootstrap
+(coloca este archivo DESPUÉS del CSS de Bootstrap)
+========================================================= */
+
+/* Footer “pegado” abajo cuando hay poco contenido */
+html, body { height: 100%; }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Fondo gamer */
+    background: linear-gradient(135deg, #131313 0%, #1a1f2b 60%, #343357 100%) fixed;
+    color: #f4f4f4;
+}
+/* ---------- Eneba navbar ---------- */
+.eneba-nav {
+    background-color: #0e0e10;        /* almost black */
+    border-bottom: 2px solid #7b3ff2; /* Eneba purple stripe */
+}
+.eneba-nav .navbar-brand,
+.eneba-nav .nav-link {
+    color: #f5f5f5 !important;
+}
+.eneba-nav .nav-link:hover,
+.eneba-nav .nav-link.active {
+    color: #b18cff !important;        /* light purple hover */
+}
+
+/* ---------- Hero slider ---------- */
+.hero-slider{height:100vh;background:#000;position:relative;overflow:hidden}
+
+.hero-slider .carousel-item{height:100vh;background-position:center center;background-repeat:no-repeat;background-attachment:scroll; }
+
+.hero-caption{position:absolute;bottom:10%;left:5%;max-width:600px;color:#fff;z-index:10}
+.hero-caption h1{font-size:3.5rem;font-weight:800;line-height:1.1;margin-bottom:.5rem}
+.hero-caption .badge{background:#7b3ff2;font-size:.9rem;padding:.35rem .75rem;margin-bottom:1rem;display:inline-block}
+.hero-caption p{font-size:1.1rem;opacity:.85;margin-bottom:1.5rem}
+.btn-eneba{background:#7b3ff2;color:#fff;border-radius:4px;padding:.75rem 2rem;font-weight:600;text-decoration:none;display:inline-block;transition:background .2s}
+.btn-eneba:hover{background:#6a2fd9;color:#fff}
+.carousel-indicators [data-bs-target]{width:10px;height:10px;border-radius:50%;background:#ffffff80;border:0}
+.carousel-indicators .active{background:#fff}
+
+
+.main-content { flex: 1 0 auto; }
+
+.footer {
+    flex-shrink: 0;
+    background-color: #212137;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem 0;
+    width: 100%;
+}
+
+/* Extracto de la empresa (INDEX) */
+.company-extract {
+    background-color: #22253b;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    line-height: 1.7;
+    margin: 2rem 0;
+}
+
+/* (Opcional) sección de contacto */
+.contact-form-section {
+    background-color: #22253b;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+}
+
+/* Tarjetas de productos */
+.card {
+    background-color: #24243e;
+    box-shadow: 0 0.625rem 1.25rem rgba(67, 216, 201, 0.13);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #343357;
+}
+.card:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.625rem 1.25rem rgba(67, 216, 201, 0.25), 0 0 10px #43d8c9bb;
+    border-color: #43d8c9;
+}
+.card-img-top {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Formularios (REGISTER/LOGIN) */
+form {
+    background-color: #181926;
+    border: 0.0625rem solid #343357;
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0.85rem 0;
+}
+.field label {
+    font-weight: 600;
+    color: #7fffd4;
+}
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="tel"] {
+    display: block;
+    width: 100%;
+    background-color: #232638;
+    border: 0.0625rem solid #495057;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #f8f8f8;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.field input:focus {
+    border-color: #43d8c9;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #43d8c955;
+}
+::placeholder { color: #9aa3af; }
+
+.hint {
+    color: #43d8c9;
+    font-size: 0.92rem;
+}
+
+.error {
+    color: #e94646;
+    min-height: 1.1em;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.btn-ghost {
+    border: 0.0625rem solid #43d8c9;
+    background: transparent;
+    color: #43d8c9;
+    border-radius: 0.5rem;
+    padding: 0.45rem 0.65rem;
+    cursor: pointer;
+}
+.btn-ghost:hover {
+    background: #232638;
+}
+
+.password-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem 0.75rem;
+}
+@media (max-width: 36rem) {
+    .options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: #1a1f2b;
+    border: 0.0625rem solid #343357;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.6rem;
+    cursor: pointer;
+    color: #ffc857;
+}
+.options label:hover {
+    background: #232638;
+    color: #43d8c9;
+}
+
+meter {
+    width: 100%;
+    height: 0.5rem;
+    border: none;
+    background: #e9ecef;
+    border-radius: 999rem;
+    margin-top: 0.35rem;
+}
+meter::-webkit-meter-bar {
+    background: #e9ecef;
+    border-radius: 999rem;
+}
+meter::-webkit-meter-optimum-value {
+    background: #43d8c9;
+    border-radius: 999rem;
+}
+meter::-webkit-meter-suboptimum-value {
+    background: #ffc857;
+    border-radius: 999rem;
+}
+meter::-webkit-meter-even-less-good-value {
+    background: #e94646;
+    border-radius: 999rem;
+}
+meter:-moz-meter-optimum::-moz-meter-bar { background: #43d8c9; }
+meter:-moz-meter-suboptimum::-moz-meter-bar { background: #ffc857; }
+meter:-moz-meter-sub-suboptimum::-moz-meter-bar { background: #e94646; }
+
+.alert {
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #43d8c9;
+    background: #191f2b;
+    color: #ffc857;
+    font-weight: bold;
+    box-shadow: 0 0 8px #43d8c966;
+}
+
+.btn-primary {
+    background-color: #e94646;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 8px #e9464660, 0 0 2px #e94646a0;
+    transition: background 0.12s, box-shadow 0.18s;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #43d8c9;
+    color: #212137;
+    box-shadow: 0 0 15px #43d8c999;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #ffc857;
+    letter-spacing: 0.05em;
+    font-family: 'Orbitron', 'Montserrat', 'Arial', sans-serif;
+}
+
+/* Links y detalles */
+a, .link {
+    color: #43d8c9;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+a:hover, a:focus, .link:hover, .link:focus {
+    color: #e94646;
+}
+
+/* Responsive para extracto/contacto */
+@media (max-width: 48rem) {
+    .company-extract,
+    .contact-form-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+}
+@media (min-width: 48.0625rem) and (max-width: 64rem) {
+    .company-extract,
+    .contact-form-section {
+        padding: 1.8rem;
+        margin: 1.8rem 0;
+    }
+}
+
+/* Nuevas reglas para mejorar visibilidad títulos y textos */
+
+/* Forzar color claro en los textos principales */
+.main-content,
+.company-extract,
+.contact-form-section,
+h1, h2, h3, h4, h5, h6,
+.section-title,
+#productosDestacados {
+    color: #f4f4f4 !important;
+}
+
+/* Título principal "GameZone" */
+h1, .titulo-principal, .brand {
+    color: #ffc857 !important;
+    font-size: 2.6rem;
+    font-family: 'Orbitron', 'Montserrat', 'Arial', sans-serif;
+    letter-spacing: 0.08em;
+    text-shadow: 0 2px 16px #13131380;
+    margin-bottom: 1rem;
+}
+
+/* Subtítulos de sección "Nuestros Productos Destacados" */
+h2, .section-title {
+    color: #43d8c9 !important;
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.1rem;
+}
+
+/* Párrafos descriptivos */
+p, .descripcion-empresa {
+    color: #e0e0e0 !important;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+}
+
+/* Fondo y padding para extractos o secciones */
+.company-extract, .descripcion-empresa {
+    background-color: #232638 !important;
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+}
+
+/* Visibilidad asegurada para títulos internos */
+#productosDestacados, .productos-destacados {
+    color: #43d8c9 !important;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/* Mejorar visibilidad de las descripciones de juegos */
+.product-description,
+p,
+section,
+#productosDestacados p,
+.card-text,
+.card-body p {
+    color: #e0e0e0 !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-shadow: 0 0 4px rgba(0,0,0,0.7);
+}
+
+/* Oscurecer fondo de tarjetas para contraste */
+.card, .product-card, .descripcion-empresa {
+    background-color: #1a1f2b !important;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 8px rgba(67, 216, 201, 0.3);
+}
+
+/* Barra superior (header o navbar) */
+.header, .navbar, .top-bar {
+    background-color: #212137; /* azul oscuro */
+    border-bottom: 2px solid #43d8c9; /* línea neón cian para resaltar */
+    color: #ffc857; /* texto amarillo para contraste */
+    box-shadow: 0 2px 10px #43d8c9aa;
+}
+
+/* Texto o logo dentro de la barra */
+.header .brand, .navbar .brand, .top-bar .brand {
+    color: #ffc857;
+    font-family: 'Orbitron', 'Montserrat', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 8px #ffc857bb;
+}
+
+/* Links o elementos en la barra */
+.header a, .navbar a, .top-bar a {
+    color: #131313;
+    transition: color 0.15s;
+}
+.header a:hover, .navbar a:hover, .top-bar a:hover {
+    color: #e94646; /* rojo neón */
+}
+
+.logo{
+    width: 12rem;
+    height: 4rem;
+
+}
