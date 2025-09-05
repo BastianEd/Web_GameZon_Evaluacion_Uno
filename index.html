@@ -9,27 +9,78 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Eneba-like navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark eneba-nav">
         <div class="container">
-            <a class="navbar-brand" href="#">🎮 GameZone</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold" href="Index.html">🎮 GameZone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./Index.html">Inicio</a>
+                        <a class="nav-link" href="Index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./Register.html">Register</a>
+                        <a class="nav-link" href="Register.html">Registrarse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./Login.html">Login</a>
+                        <a class="nav-link" href="Login.html">Ingresar</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- HERO SLIDER (ENEBA CLONE) -->
+    <section class="hero-slider">
+        <div id="enebaHero" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+            <!-- indicators -->
+            <div class="carousel-indicators">
+                <button data-bs-target="#enebaHero" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#enebaHero" data-bs-slide-to="1"></button>
+                <button data-bs-target="#enebaHero" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- slide 1 -->
+                <div class="carousel-item active" style="background-image:url(./assets/img/Slider_1.webp)">
+                    <div class="hero-caption">
+                        <span class="badge">Venta</span>
+                        <h1>Hell is Us & Silksong</h1>
+                        <p>Descubre los últimos títulos al mejor precio.</p>
+                        <a href="#" class="btn-eneba">Descubrir +</a>
+                    </div>
+                </div>
+                <!-- slide 2 -->
+                <div class="carousel-item" style="background-image:url(./assets/img/Slider_2.jpg)">
+                    <div class="hero-caption">
+                        <span class="badge">FC26</span>
+                        <h1>Metal Gear Solid △ Snake Eater</h1>
+                        <p>Ahorra con tarjetas de regalo y sé un héroe.</p>
+                        <a href="#" class="btn-eneba">Comprar ahora</a>
+                    </div>
+                </div>
+                <!-- slide 3 -->
+                <div class="carousel-item" style="background-image:url('https://slider.eneba.games/resized/INpW07V2zy4WdohTdC66B9DRaQbUMaE5nF3-oDU4mtE_1500x400_1x-1500x400_150_0.jpg')">
+                    <div class="hero-caption">
+                        <span class="badge">Make A Wish</span>
+                        <h1>Juegos PC y más barato</h1>
+                        <p>Ofertas exclusivas en títulos de PC.</p>
+                        <a href="#" class="btn-eneba">Ver ofertas</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- prev/next -->
+            <button class="carousel-control-prev" data-bs-target="#enebaHero" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#enebaHero" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
 </header>
 
 <main class="container my-5 main-content">
