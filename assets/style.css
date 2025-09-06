@@ -27,6 +27,12 @@ body {
 .eneba-nav .nav-link.active {
     color: #b18cff !important;        /* light purple hover */
 }
+/*-- LOGO DE BARRA DE NAVEGACION --*/
+.logo{
+    border-radius: 0.4rem;
+    width: 12rem;
+    height: 4rem;
+}
 
 /* ---------- Hero slider ---------- */
 .hero-slider{height:100vh;background:#000;position:relative;overflow:hidden}
